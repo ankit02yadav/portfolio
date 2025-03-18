@@ -26,12 +26,12 @@ This is a personal portfolio website for **Ankit Yadav**, a Software Engineer, W
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/ankit-yadav-portfolio.git
+    https://github.com/ankit02yadav/portfolio.git
     ```
 
 2. Open the project folder:
     ```bash
-    cd ankit-yadav-portfolio
+    cd portfolio
     ```
 
 3. Open the `index.html` file in your browser to view the portfolio.
