@@ -1,0 +1,120 @@
+:root{
+    --bg-color: rgb(21,21,50);
+    --second-bg-color:rgb(12, 13, 48);
+    --text-color:white;
+    --red: red;
+    --main: rgb(0, 171, 240);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--bg-color);
+}
+.heading{
+    font-size: 3em ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 600;
+}
+.heading span{
+    margin-left: 10px;
+    color: var(--main);
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .wrapper{
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.wrapper .box{
+    width: 300px;
+    height: 168px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 0px 10px black;
+}
+.box a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid red; */
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid rgb(231, 216, 109); */
+}
+.box .hidden{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: translateY(100%);
+    transition: .4s;
+}
+.box:hover .hidden{
+    transform: translateY(0px);
+}
+.box .hidden .head{
+    font-size: 2em;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.box .hidden span{
+    text-align: center;
+    margin: 10px 0px;
+}
+#resturant .hidden{
+    background: linear-gradient(transparent , rgb(39, 30, 30) );
+}
+#ice_cream .hidden{
+    background: linear-gradient(transparent , rgb(191, 113, 173) );
+}
+@media (max-width:1200px) {
+    .container .wrapper{
+        width: 95%;
+    }
+}
+@media (max-width:1000px) {
+    .container .wrapper{
+        grid-template-columns: auto auto;
+    }
+}
+@media (max-width:680px) {
+    .container .wrapper{
+        grid-template-columns: auto;
+    }
+}
+@media (max-width:350px) {
+    .wrapper .box{
+        width: 250px;
+        height: 145px;
+    }
+    
+}
