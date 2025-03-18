@@ -1,0 +1,257 @@
+:root{
+    --clr: rgb(21,21,50);
+    --clr2: aqua;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background: black;
+}
+.conatiner{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 50px;
+}
+.heading{
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+}
+.heading span{
+    margin: 0px 9px;
+    font-size: 50px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+}
+.heading span.r{
+    color: palevioletred;
+}
+.heading span.p{
+    color: rgb(221, 221, 94);
+}
+.heading span.s{
+    color: rgb(143, 208, 230);
+}
+.box{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.box .choosen{
+    height: 300px;
+    width: 300px;
+    /* border: 2px solid blue; */
+}
+.box .player{
+    border-right: 2px solid var(--clr2);
+}
+.box  .computer{
+    border-left: 2px solid var(--clr2);
+}
+.choosen .head{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    text-shadow: var(--clr2) 0px 0px 20px;
+}
+.choose{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.choose .cimg{
+    width: 130px;
+    margin: 0px 10px;
+    
+}
+.choose .cimg img{
+    transform: rotate(-90deg);
+    width: 100%;
+    cursor: pointer;
+    filter: contrast(0.6);
+}
+
+.choose .cimg img:hover{
+    filter: contrast(1);
+    transition: .5s;
+    transform: scale(1.2) rotate(-90deg);
+}
+.score{
+    display: flex;
+    justify-content: center;
+    font-size: 34px;
+    margin-top: 30px;
+}
+.score div div {
+    margin: 8px 0px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.score div div span{
+    margin-left: 10px;
+}
+.pwin{
+    color: rgb(0, 255, 0);
+    text-shadow: rgb(0, 255, 0) 0px 0px 20px; 
+}
+.cwin{
+    color: rgb(255, 0, 0);
+    text-shadow: rgb(255, 0, 0) 0px 0px 20px; 
+}
+.total{
+    color: rgb(0, 4, 255);
+    text-shadow: rgb(0, 4, 255) 0px 0px 20px; 
+}
+
+
+
+
+/*  */
+
+
+
+.choosen .img{
+    /* border: 2px solid red; */
+    width: 230px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.choosen .img img{
+    width: 100%;
+    transform: rotate(-90deg);
+}
+
+/* lasrttttttttttttttt */
+
+
+#last{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+}
+
+#last{
+    display: none;
+}
+
+
+.img img{
+    display: none;
+}
+.yourwin{
+    display: flex;
+    justify-content: center;
+}
+
+.yourwin span{
+    margin: 0px 10px;
+}
+
+.win{
+    display: flex;
+    justify-content: center;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+.button button{
+    width: 250px;
+    height: 80px;
+    margin-top: 50px;
+    border-radius: 20px;
+    border-color: aqua;
+    background: var(--clr);
+    color: var(--clr2);
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: aqua 0px 0px 20px;
+    cursor: pointer;
+    z-index: 99;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+    
+}
+.button button::before{
+    content: " ";
+    position: absolute;
+    /* border: 2px solid red; */
+    top: 0;
+    left:0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background: var(--clr2);
+    transition: 1s;
+}
+.button button:hover{
+    color: black;
+}
+.button button:hover::before{
+    width: 100%;
+}
+
+
+
+
+@media (max-width:670px){
+    .box .choosen{
+        height: 150px;
+        width: 150px;
+        /* border: 2px solid blue; */
+    }
+    .heading span{
+        font-size: 30px;
+    }
+    .choosen .head{
+        font-size: 10px;
+        text-shadow: var(--clr2) 0px 0px 5px;
+    }
+    .choosen .img{
+        /* border: 2px solid red; */
+        width: 90px;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    .score{
+        font-size: 14px;
+    }
+    .choose .cimg{
+        width: 70px;
+        margin: 0px 10px;
+        
+    }
+    #last{
+        font-size: 20px;
+    }
+    .button button{
+        width: 150px;
+        height: 40px;
+        border-radius: 0px;
+        font-size: 16px;
+    }
+    
+
+}
+@media (max-width:370px){
+    .heading span{
+        font-size: 18px;
+        font-weight: 600;
+    }
+}

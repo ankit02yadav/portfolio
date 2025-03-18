@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper scissors</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="conatiner">
+        <div class="heading">
+            <span class="r">Rock</span>
+            <span class="p">Paper</span>
+            <span class="s">Scissors</span>
+        </div>
+        <div class="box">
+            <div class="player choosen">
+                <div class="head">Player</div>
+                <div class="img">
+                    <img id="pr" src="./img/rock.png" alt="">
+                    <img id="pp" src="./img/paper.png" alt="">
+                    <img id="ps" src="./img/scissors.png" alt="">
+                </div>
+            </div>
+            <div class="computer choosen">
+                <div class="head">Computer</div>
+                <div class="img" id="computer_choose" >
+                    <img id="cr" src="./img/rock.png" alt="">
+                    <img id="cp" src="./img/paper.png" alt="">
+                    <img id="cs" src="./img/scissors.png" alt="">
+                </div>
+
+            </div>
+        </div>
+        <div class="choose">
+            <div class="cimg"><img id="rock" src="./img/rock.png" alt="" onclick="rock()"></div>
+            <div class="cimg"><img id="paper" src="./img/paper.png" alt="" onclick="paper()"></div>
+            <div class="cimg"><img id="scissors" src="./img/scissors.png" alt="" onclick="scissors()"></div>
+        </div>
+        <div class="score">
+            <div>
+                <div class="pwin ">Player Wins : <span id="pwin">0</span></div>
+                <div class="cwin ">Computer Wins : <span id="cwin">0</span></div>
+                <div class="tie ">Total Tie : <span id="tie">0</span></div>
+                <div class="total ">Total Matchs : <span id="total">0</span></div>
+            </div>
+        </div>
+        <div id="last">
+
+            <div class="lastt">
+                <div class="yourwin">You Win <span id="yourwin">0</span> Matches</div>
+                <div class="win" id="win">Computer wins</div>
+                <div class="button"><button type="reset" onclick="restart()">Restart</button></div>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

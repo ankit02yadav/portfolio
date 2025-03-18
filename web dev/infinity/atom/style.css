@@ -1,0 +1,109 @@
+:root{
+    --bg: rgb(21,21,50);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--bg);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.atom{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: aqua;
+    box-shadow: aqua 0px 0px 10px , aqua 0px 0px 20px , aqua 0px 0px 30px , aqua 0px 0px 50px , aqua 0px 0px 90px;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+.p1{
+    transform: rotate3d(.5, 1 , 0 , 80deg);
+    width: 400px;
+    height: 400px;
+    /* border: 2px solid red; */
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    border-radius: 50%;
+    border-top: 2px solid aqua;
+    border-bottom: 2px solid aqua;
+    animation: move1 1s infinite linear;
+
+}
+.p2{
+    transform: rotate3d(-1.5, 1 , 0 , 80deg);
+    width: 400px;
+    height: 400px;
+    /* border: 2px solid red; */
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    border-radius: 50%;
+    border-top: 2px solid aqua;
+    border-bottom: 2px solid aqua;
+    animation: move 1s infinite linear;
+    /* animation-delay: .8s; */
+
+}
+
+.p3{
+    transform: rotate3d(0,1,0,80deg);
+    width: 400px;
+    height: 400px;
+    /* border: 2px solid red; */
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    border-radius: 50%;
+    border-top: 2px solid aqua;
+    border-bottom: 2px solid aqua;
+    animation: move3 1s infinite linear;
+    /* animation-delay: .5s; */
+
+}
+@keyframes move {
+    0%{
+        transform: rotate3d(-1.5, 1 , 0 , 80deg) rotate(0deg);
+    }
+    100%{
+        transform: rotate3d(-1.5, 1 , 0 , 80deg) rotate(360deg);
+    }
+}
+@keyframes move1 {
+    0%{
+        transform: rotate3d(1.5, 1 , 0 , 80deg) rotate(0deg);
+    }
+    100%{
+        transform: rotate3d(1.5, 1 , 0 , 80deg) rotate(360deg);
+    }
+}
+@keyframes move3 {
+    0%{
+        transform: rotate3d(0,1,0,80deg) rotate(0deg);
+    }
+    100%{
+        transform: rotate3d(0,1,0,80deg) rotate(360deg);
+    }
+}
+
+@media (max-width:800px) {
+    .container{
+        transform: scale(.7);
+    }
+}
+@media (max-width:500px) {
+    .container{
+        transform: scale(.5);
+    }
+}
+@media (max-width:350px) {
+    .container{
+        transform: scale(.4);
+    }
+}

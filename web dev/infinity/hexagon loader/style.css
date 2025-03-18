@@ -1,0 +1,170 @@
+/* clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%); */
+:root{
+    --clr:red;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    /* height: 100vh; */
+    min-width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 600px;
+    height: 440px;
+    position: relative;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 40px;
+}
+.first {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.first .hexa{
+    display: inline-block;
+    height: 73px;
+    width: 66px;
+    background: var(--clr);
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-right: 6px;
+}
+
+.second {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 60px;
+}
+.second .hexa{
+    display: inline-block;
+    height: 73px;
+    width: 66px;
+    background: var(--clr);
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-right: 6px;
+}
+.third {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 120px;
+}
+.third .hexa{
+    display: inline-block;
+    height: 73px;
+    width: 66px;
+    background: var(--clr);
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-right: 6px;
+}
+
+.mid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 180px;
+}
+.mid .hexa{
+    display: inline-block;
+    height: 73px;
+    width: 66px;
+    background: var(--clr);
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-right: 6px;
+}
+
+
+.third-last {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 240px;
+}
+.third-last .hexa{
+    display: inline-block;
+    height: 73px;
+    width: 66px;
+    background: var(--clr);
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-right: 6px;
+}
+
+
+
+.second-last {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 300px;
+}
+.second-last .hexa{
+    display: inline-block;
+    height: 73px;
+    width: 66px;
+    background: var(--clr);
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-right: 6px;
+}
+
+
+
+
+.last {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 360px;
+}
+.last .hexa{
+    display: inline-block;
+    height: 73px;
+    width: 66px;
+    background: var(--clr);
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-right: 6px;
+}
+.a{
+    animation: zoom 2s linear infinite;
+}
+.b{
+    animation: zoom 2s linear infinite;
+    animation-delay: .2s;
+}
+.c{
+    animation: zoom 2s linear infinite;
+    animation-delay: .3s;
+}
+.d{
+    animation: zoom 2s linear infinite;
+    animation-delay: .7s;
+    
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0);
+    }
+}
+@media (max-width:800px) {
+    .container{
+        transform: scale(.7);
+    }
+
+}
