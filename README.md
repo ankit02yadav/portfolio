@@ -37,7 +37,7 @@ This is a personal portfolio website for **Ankit Yadav**, a Software Engineer, W
 3. Open the `index.html` file in your browser to view the portfolio.
 
 
-## Customization
+## Customization  
 
 To personalize the website, you can:
 
